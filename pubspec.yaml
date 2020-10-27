@@ -23,8 +23,16 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  bloc: ^6.1.0
+  cloud_firestore: ^0.14.1+3
   cupertino_icons: ^1.0.0
+  equatable: ^1.2.5
+  firebase_auth: ^0.18.1+2
+  firebase_core: ^0.5.0+1
+  flutter_bloc: ^6.0.6
+  flutter_neumorphic: ^3.0.3
   flutter_screenutil: ^3.1.1
+  keyboard_dismisser: ^1.0.2
   provider: ^4.3.2+2
 
 dev_dependencies:
@@ -36,20 +44,24 @@ dev_dependencies:
 # The following section is specific to Flutter.
 flutter:
   fonts:
-    - family: Metropolis
+    - family: Metropolis Thin
       fonts:
         - asset: assets/fonts/Metropolis-Thin.otf
-          weight: 100
-        - asset: assets/fonts/Metropolis-ExtraLight.otf
-          weight: 200
-        - asset: assets/fonts/Metropolis-ExtraLightItalic.otf
-          weight: 200
-          style: italic
+
+    - family: Metropolis Light
+      fonts:
         - asset: assets/fonts/Metropolis-Light.otf
-          weight: 300
         - asset: assets/fonts/Metropolis-LightItalic.otf
-          weight: 300
           style: italic
+
+    - family: Metropolis ExtraLight
+      fonts:
+        - asset: assets/fonts/Metropolis-ExtraLight.otf
+        - asset: assets/fonts/Metropolis-ExtraLightItalic.otf
+          style: italic
+
+    - family: Metropolis
+      fonts:
         - asset: assets/fonts/Metropolis-Regular.otf
         - asset: assets/fonts/Metropolis-RegularItalic.otf
           style: italic
