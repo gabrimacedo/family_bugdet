@@ -21,8 +21,6 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
-  MyApp({Key key}) : super(key: key);
-
   final authRepository = AuthRepository();
 
   @override
@@ -33,17 +31,26 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
+        themeMode: ThemeMode.dark,
+        darkTheme: ThemeData(
+          fontFamily: 'Metropolis',
+          brightness: Brightness.dark,
+          iconTheme: IconThemeData(color: Colors.white),
+        ),
         theme: ThemeData(
+          fontFamily: 'Metropolis',
           iconTheme: IconThemeData(color: AppColors.primaryColor),
         ),
         routes: {
           Home.routeName: (context) => Home(),
           LoginPage.routeName: (context) => LoginPage(),
+          AltHomePage.routeName: (context) => AltHomePage(),
         },
+        initialRoute: AltHomePage.routeName,
         home: BlocBuilder<AuthBloc, AuthState>(
           builder: (context, state) {
             ScreenUtil.init(context, designSize: Size(1080, 1920));
-            
+
             if (state is UnknowState) {
               return SplashScreen();
             } else if (state is LoggedInState) {
@@ -58,7 +65,7 @@ class MyApp extends StatelessWidget {
 }
 
 class SplashScreen extends StatelessWidget {
-  const SplashScreen({Key key}) : super(key: key);
+  const SplashScreen();
 
   @override
   Widget build(BuildContext context) {

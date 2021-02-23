@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BudgetBomb extends StatefulWidget {
-  const BudgetBomb({Key key}) : super(key: key);
+  
 
   @override
   _BudgetBombState createState() => _BudgetBombState();
@@ -12,7 +12,7 @@ class BudgetBomb extends StatefulWidget {
 
 class _BudgetBombState extends State<BudgetBomb>
     with SingleTickerProviderStateMixin {
-  AnimationController _controller;
+   AnimationController _controller;
 
   @override
   void initState() {
@@ -84,7 +84,7 @@ class _BudgetBombState extends State<BudgetBomb>
 class WaveClipper extends CustomClipper<Path> {
   const WaveClipper({
     @required this.anim,
-    @required this.waveShift,
+    @required  this.waveShift,
     @required this.amplitude,
     @required this.direction,
   }) : super(reclip: anim);

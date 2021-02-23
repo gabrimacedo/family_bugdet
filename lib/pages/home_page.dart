@@ -174,7 +174,7 @@ class DashBoard extends StatelessWidget {
             ),
           ),
         ),
-        const BudgetBomb(),
+        BudgetBomb(),
       ],
     );
   }
